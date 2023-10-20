@@ -1,4 +1,4 @@
-import { IsNotEmpty, IsNumber, Min, Max, IsString, Length } from "class-validator";
+import { IsNotEmpty, IsNumber, Min, Max} from "class-validator";
 
 export class RateRestaurantDto {
 

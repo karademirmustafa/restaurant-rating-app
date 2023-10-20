@@ -65,17 +65,16 @@ export class RestaurantsService {
     async rate(id: string, rate: RateRestaurantDto) {
         const restaurant = await this.findById(id);
         if (!restaurant) throw new NotFoundException('No restaurant found to rate')
-        // const ratings = await this.ratingService.findRatingRestaurant(id);
         try {
-            const newRate = await this.ratingService.create({ id, rate:rate.rate });
-            
+            await this.ratingService.create({ id, rate: rate.rate });
+
             const calculateAverage = await this.ratingService.calculateRating(id);
 
             return {
-                statusCode:200,
-                message:"Başarılı kardeş",
-                data:{
-                    rate:calculateAverage,
+                statusCode: 200,
+                message: "Başarılı kardeş",
+                data: {
+                    rate: calculateAverage,
                     restaurant
                 }
             }
@@ -87,9 +86,6 @@ export class RestaurantsService {
     }
 
 
-    async alkan(){
-        return this.ratingService.calculateRating("6532362324958a9ab166bfb2");
-    }
 
 
 
