@@ -5,10 +5,12 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { Restaurant, RestaurantSchema } from './restaurants.entity';
 import { Rating, RatingSchema } from 'src/rating/rating.entity';
 import { RatingService } from 'src/rating/rating.service';
+import { RatingModule } from 'src/rating/rating.module';
 
 @Module({
-  imports: [MongooseModule.forFeature([{ name: Restaurant.name, schema: RestaurantSchema }]), MongooseModule.forFeature([{ name: Rating.name, schema: RatingSchema }])],
+  imports: [RatingModule,MongooseModule.forFeature([{ name: Restaurant.name, schema: RestaurantSchema }])],
   controllers: [RestaurantsController],
-  providers: [RestaurantsService, RatingService]
+  providers: [RestaurantsService],
+  exports:[RestaurantsService]
 })
 export class RestaurantsModule { }
