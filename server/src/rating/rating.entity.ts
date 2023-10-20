@@ -9,6 +9,8 @@ export class Rating extends Document {
     @Prop({ type: Types.ObjectId, ref: 'Restaurant' })
     restaurant_id: Types.ObjectId; 
 
+    @Prop({type:Types.ObjectId,ref:"User"})
+    user_id:Types.ObjectId;
 }
 
 export const RatingSchema = SchemaFactory.createForClass(Rating);

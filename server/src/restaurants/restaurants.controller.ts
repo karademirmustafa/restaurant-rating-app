@@ -13,6 +13,7 @@ export class RestaurantsController {
   @UseGuards(AuthenticationGuard)
   @Post()
   async createRestaurant(@Req() {user},@Body() createRestaurantDto: CreateRestaurantDto) {
+    createRestaurantDto.user_id=user.id;
     return this.restaurantsService.create(createRestaurantDto);
   }
 
@@ -21,8 +22,10 @@ export class RestaurantsController {
     return this.restaurantsService.findAll(Number(page), sorting);
   }
 
+  @UseGuards(AuthenticationGuard)
   @Post("/rate/:id")
-  async rateRestaurant(@Param('id') restaurantId: string, @Body() rateRestaurantDto: RateRestaurantDto) {
+  async rateRestaurant(@Param('id') restaurantId: string, @Body() rateRestaurantDto: RateRestaurantDto,@Req() {user} ) {
+    rateRestaurantDto.user_id=user.id
     return this.restaurantsService.rate(restaurantId, rateRestaurantDto)
   }
 

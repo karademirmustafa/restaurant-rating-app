@@ -7,11 +7,13 @@ export class CreateRestaurantDto {
     name: string;
 
     @IsString()
-    description: string;
+    description?: string;
 
     @IsNumber()
     @IsNotEmpty()
     @Min(0, { message: 'Rating must be at least 0' })
     @Max(5, { message: 'Rating must not exceed 5' })
-    rating: number;
+    rating?: number;
+
+    user_id:string;
   }

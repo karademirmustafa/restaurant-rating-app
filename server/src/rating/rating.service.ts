@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { BadRequestException, Injectable, NotFoundException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Rating } from './rating.entity';
 import { Model } from 'mongoose';
@@ -13,6 +13,12 @@ export class RatingService {
         const ratings = await this.ratingModel.find({ restaurant_id: id }).exec();
         return ratings;
     }
+    async findOneRating(restaurant_id: string, user_id) {
+        const rating = await this.ratingModel.findOne({ restaurant_id, user_id });
+
+        if (!rating) throw new NotFoundException("Not found rating");
+        return rating;
+    }
 
     async calculateRating(id: string) {
         const ratings = await this.findRatingRestaurant(id);
@@ -21,16 +27,13 @@ export class RatingService {
 
         return Number((Number(aritmetik) / ratings.length).toFixed(2));
     }
-    async create(createRatingDto: CreateRatingDto) {
+    async create(createRatingDto: CreateRatingDto, userId: string) {
         const { rate, id } = createRatingDto;
-
-        // const restaurant = await this.restaurantsService.findById(id);
-        // if (!restaurant) throw new NotFoundException('No restaurant found to rate')
         try {
-            const newRating = new this.ratingModel({ rate, restaurant_id: id });
+            const newRating = new this.ratingModel({ rate, restaurant_id: id, user_id: userId });
             return newRating.save();
         } catch (err) {
-            throw new err
+            throw new BadRequestException();
         }
     }
 

@@ -1,4 +1,4 @@
-import { Dependencies, Inject, Injectable, NotFoundException, forwardRef } from '@nestjs/common';
+import { BadRequestException, Dependencies, Inject, Injectable, NotFoundException, forwardRef } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Restaurant } from './restaurants.entity';
 import { Model } from 'mongoose';
@@ -6,6 +6,7 @@ import { CreateRestaurantDto } from './dtos/create-restaurant.dto';
 import { SortOptions } from './types';
 import { RatingService } from 'src/rating/rating.service';
 import { RateRestaurantDto } from './dtos/rate-restaurant.dto';
+import { User } from 'src/user/user.entity';
 
 @Injectable()
 @Dependencies(RatingService)
@@ -62,24 +63,33 @@ export class RestaurantsService {
         return restaurant;
     }
 
+
     async rate(id: string, rate: RateRestaurantDto) {
+        const { user_id } = rate;
         const restaurant = await this.findById(id);
-        if (!restaurant) throw new NotFoundException('No restaurant found to rate')
+        if (!restaurant) throw new NotFoundException('No restaurant found to rate');
+        const exist_rate_user = await this.ratingService.findOneRating(id, user_id);
         try {
-            await this.ratingService.create({ id, rate: rate.rate });
+            if (exist_rate_user) {
+                exist_rate_user.rate = rate.rate;
+                await exist_rate_user.save();
+            } else {
+                await this.ratingService.create({ id, rate: rate.rate }, rate.user_id);
+
+            }
 
             const calculateAverage = await this.ratingService.calculateRating(id);
 
             return {
                 statusCode: 200,
-                message: "Başarılı kardeş",
+                message: "Successfull",
                 data: {
                     rate: calculateAverage,
                     restaurant
                 }
             }
 
-        } catch (err) { throw new err }
+        } catch (err) { throw new BadRequestException() }
 
 
 
