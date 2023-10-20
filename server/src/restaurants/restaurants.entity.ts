@@ -1,7 +1,7 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
 
-@Schema()
+@Schema({ timestamps: true, versionKey: false }) // createdAt and updatedAt auto added
 export class Restaurant extends Document {
   @Prop()
   name: string;
