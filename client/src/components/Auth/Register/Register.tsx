@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import authService from '../../../services/AuthService'
 import { useNavigate } from 'react-router-dom'
+import toast from 'react-hot-toast'
 type Props = {}
 
 const Register = (props: Props) => {
@@ -12,17 +13,19 @@ const Register = (props: Props) => {
         if (password === repassword) {
 
             const result = await authService.register(email, password);
-            console.log(result)
             if(result.error){
-
+                setRegisterForm(initialRegisterForm);
+               return toast.error(result.errorDetails.message);
             }
-            navigate('/')
+            return navigate('/')
         } else {
+            return toast.error("Register failed!");
             // error message state empty
         }
 
     }
-    const [registerForm, setRegisterForm] = useState({ email: "", password: "", repassword: "" });
+    const initialRegisterForm={email:"",password:"",repassword:""}
+    const [registerForm, setRegisterForm] = useState(initialRegisterForm);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
@@ -43,15 +46,15 @@ const Register = (props: Props) => {
                             <form onSubmit={handleSubmit}>
                                 <div className="form-group">
                                     <label htmlFor="username">Email:</label>
-                                    <input type="text" className="form-control" onChange={handleChange} id="email"  name="email" placeholder="Enter email" />
+                                    <input type="text" className="form-control" onChange={handleChange}  value={registerForm.email} id="email"  name="email" placeholder="Enter email" />
                                 </div>
                                 <div className="form-group">
                                     <label htmlFor="password">Password:</label>
-                                    <input type="password" className="form-control" onChange={handleChange} id="password" name="password" placeholder="Enter password" />
+                                    <input type="password" className="form-control" onChange={handleChange} value={registerForm.password} id="password" name="password" placeholder="Enter password" />
                                 </div>
                                 <div className="form-group">
                                     <label htmlFor="repassword">Re Password:</label>
-                                    <input type="password" className="form-control" onChange={handleChange} id="repassword" name="repassword" placeholder="Enter repassword" />
+                                    <input type="password" className="form-control" onChange={handleChange} value={registerForm.repassword} id="repassword" name="repassword" placeholder="Enter repassword" />
                                 </div>
                                 <div className="d-flex justify-content-center">
                                     <button type="submit" className="btn btn-primary mt-2 w-100">Register</button>
