@@ -1,10 +1,14 @@
+import React from 'react';
+import Header from './components/Header/Header';
+import RouterPage from './router';
+const App: React.FC = () => {
 
-function App() {
   return (
-    <div className="App">
-     hello
-    </div>
+    <>
+      <Header />
+      <RouterPage />
+    </>
   );
-}
+};
 
 export default App;
