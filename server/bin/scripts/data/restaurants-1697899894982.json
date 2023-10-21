@@ -1,0 +1,256 @@
+[
+    {
+        "_id": "6532362324958a9ab166bfb2",
+        "name": "Mekan 1",
+        "description": "Mekan açıklaması",
+        "rating": 5,
+        "__v": 0
+    },
+    {
+        "_id": "6532362d24958a9ab166bfb4",
+        "name": "Mekan 2",
+        "description": "Mekan açıklaması",
+        "rating": 5,
+        "__v": 0
+    },
+    {
+        "_id": "6532378ff3e3fc3e40c6ed8f",
+        "name": "Me",
+        "description": "Mekan açıklaması",
+        "rating": 5,
+        "__v": 0
+    },
+    {
+        "_id": "653238962a3c3cb46a87b99a",
+        "name": "Mekan6",
+        "description": "Mekan açıklaması",
+        "rating": 5,
+        "createdAt": "2023-10-20T08:21:42.283Z",
+        "updatedAt": "2023-10-20T08:21:42.283Z"
+    },
+    {
+        "_id": "65323a3b450734a7c40d724c",
+        "name": "Mekan7",
+        "description": "Mekan açıklaması",
+        "rating": 3,
+        "createdAt": "2023-10-20T08:28:43.514Z",
+        "updatedAt": "2023-10-20T08:28:43.514Z"
+    },
+    {
+        "_id": "6532410d561ee361d06f2968",
+        "name": "Mekan8",
+        "description": "Mekan açıklaması",
+        "rating": 5,
+        "createdAt": "2023-10-20T08:57:49.608Z",
+        "updatedAt": "2023-10-20T08:57:49.608Z"
+    },
+    {
+        "_id": "65325c5add5f86dba90bf94d",
+        "name": "Mekan9",
+        "description": "Mekan açıklaması",
+        "rating": 2,
+        "createdAt": "2023-10-20T10:54:18.817Z",
+        "updatedAt": "2023-10-20T10:54:18.817Z"
+    },
+    {
+        "_id": "65325c76dd5f86dba90bf94f",
+        "name": "Mekan9",
+        "description": "Mekan açıklaması",
+        "rating": 5,
+        "createdAt": "2023-10-20T10:54:46.133Z",
+        "updatedAt": "2023-10-21T14:28:40.012Z"
+    },
+    {
+        "_id": "65325c78dd5f86dba90bf951",
+        "name": "Mekan9",
+        "description": "Mekan açıklaması",
+        "rating": 4,
+        "createdAt": "2023-10-20T10:54:48.795Z",
+        "updatedAt": "2023-10-20T10:54:48.795Z"
+    },
+    {
+        "_id": "65326efe83a8ffa46c28161a",
+        "name": "Mekan9",
+        "description": "Mekan açıklaması",
+        "rating": 4,
+        "createdAt": "2023-10-20T12:13:51.001Z",
+        "updatedAt": "2023-10-20T12:13:51.001Z"
+    },
+    {
+        "_id": "65326eff83a8ffa46c28161c",
+        "name": "Mekan9",
+        "description": "Mekan açıklaması",
+        "rating": 4,
+        "createdAt": "2023-10-20T12:13:51.559Z",
+        "updatedAt": "2023-10-20T12:13:51.559Z"
+    },
+    {
+        "_id": "65326eff83a8ffa46c28161e",
+        "name": "Mekan9",
+        "description": "Mekan açıklaması",
+        "rating": 4,
+        "createdAt": "2023-10-20T12:13:51.964Z",
+        "updatedAt": "2023-10-20T12:13:51.964Z"
+    },
+    {
+        "_id": "65326f0083a8ffa46c281620",
+        "name": "Mekan9",
+        "description": "Mekan açıklaması",
+        "rating": 4,
+        "createdAt": "2023-10-20T12:13:52.551Z",
+        "updatedAt": "2023-10-20T12:13:52.551Z"
+    },
+    {
+        "_id": "653281d143c03b928f1e4b1b",
+        "name": "Mekan9",
+        "description": "Mekan açıklaması",
+        "rating": 4,
+        "createdAt": "2023-10-20T13:34:09.388Z",
+        "updatedAt": "2023-10-20T13:34:09.388Z"
+    },
+    {
+        "_id": "653281d243c03b928f1e4b1d",
+        "name": "Mekan9",
+        "description": "Mekan açıklaması",
+        "rating": 4,
+        "createdAt": "2023-10-20T13:34:10.074Z",
+        "updatedAt": "2023-10-20T13:34:10.074Z"
+    },
+    {
+        "_id": "6532c2ed4abb7342b50cee21",
+        "name": "Mekan9",
+        "description": "Mekan açıklaması",
+        "rating": 4,
+        "createdAt": "2023-10-20T18:11:57.937Z",
+        "updatedAt": "2023-10-20T18:11:57.937Z"
+    },
+    {
+        "_id": "6532c2f34abb7342b50cee23",
+        "name": "Mekan9",
+        "description": "Mekan açıklaması",
+        "rating": 4,
+        "createdAt": "2023-10-20T18:12:03.976Z",
+        "updatedAt": "2023-10-20T18:12:03.976Z"
+    },
+    {
+        "_id": "6532c2fa4abb7342b50cee25",
+        "name": "Mekan9",
+        "description": "Mekan açıklaması",
+        "rating": 4,
+        "createdAt": "2023-10-20T18:12:10.138Z",
+        "updatedAt": "2023-10-20T18:12:10.138Z"
+    },
+    {
+        "_id": "6532c715c5d3267e8c95afca",
+        "name": "Mekan9",
+        "description": "Mekan açıklaması",
+        "rating": 4,
+        "createdAt": "2023-10-20T18:29:41.861Z",
+        "updatedAt": "2023-10-20T18:29:41.861Z"
+    },
+    {
+        "_id": "6532c9cd95f42faf100c4a35",
+        "name": "Mekan9",
+        "description": "Mekan açıklaması",
+        "rating": 4,
+        "createdAt": "2023-10-20T18:41:17.564Z",
+        "updatedAt": "2023-10-20T18:41:17.564Z"
+    },
+    {
+        "_id": "6532d998ee0965eee5e8b8e2",
+        "name": "Merhaba",
+        "description": "d",
+        "rating": 4,
+        "createdAt": "2023-10-20T19:48:40.147Z",
+        "updatedAt": "2023-10-20T19:48:40.147Z"
+    },
+    {
+        "_id": "6532d9a4ee0965eee5e8b8e4",
+        "name": "Merhaba",
+        "description": "d",
+        "rating": 4,
+        "createdAt": "2023-10-20T19:48:52.784Z",
+        "updatedAt": "2023-10-20T19:48:52.784Z"
+    },
+    {
+        "_id": "6532da3d9883137e158d0c8a",
+        "user_id": "6532bd939400216f32252fd7",
+        "name": "Merhaba",
+        "description": "d",
+        "rating": 4,
+        "createdAt": "2023-10-20T19:51:25.635Z",
+        "updatedAt": "2023-10-20T19:51:25.635Z"
+    },
+    {
+        "_id": "6532da409883137e158d0c8c",
+        "user_id": "6532bd939400216f32252fd7",
+        "name": "Merhaba",
+        "description": "d",
+        "rating": 4,
+        "createdAt": "2023-10-20T19:51:28.828Z",
+        "updatedAt": "2023-10-20T19:51:28.828Z"
+    },
+    {
+        "_id": "6533dbc5866930be3b3d5465",
+        "user_id": "65339879d84cc01aa9e8fe8d",
+        "name": "Mustafa",
+        "description": "açık",
+        "rating": 3,
+        "createdAt": "2023-10-21T14:10:13.739Z",
+        "updatedAt": "2023-10-21T14:28:34.941Z"
+    },
+    {
+        "_id": "6533dbe0866930be3b3d546f",
+        "user_id": "65339879d84cc01aa9e8fe8d",
+        "name": "Musta2fa",
+        "description": "açık",
+        "rating": 2,
+        "createdAt": "2023-10-21T14:10:40.293Z",
+        "updatedAt": "2023-10-21T14:10:40.293Z"
+    },
+    {
+        "_id": "6533dcf7d9ce114eebb45f6d",
+        "user_id": "65339879d84cc01aa9e8fe8d",
+        "name": "Musta2fa",
+        "description": "açık",
+        "rating": 5,
+        "createdAt": "2023-10-21T14:15:19.627Z",
+        "updatedAt": "2023-10-21T14:15:19.627Z"
+    },
+    {
+        "_id": "6533ddb9d9ce114eebb45f83",
+        "user_id": "65339879d84cc01aa9e8fe8d",
+        "name": "55dd",
+        "description": "dsds",
+        "rating": 5,
+        "createdAt": "2023-10-21T14:18:33.391Z",
+        "updatedAt": "2023-10-21T14:18:33.391Z"
+    },
+    {
+        "_id": "6533dde3d9ce114eebb45f89",
+        "user_id": "65339879d84cc01aa9e8fe8d",
+        "name": "55ddd",
+        "description": "dsds",
+        "rating": 5,
+        "createdAt": "2023-10-21T14:19:15.499Z",
+        "updatedAt": "2023-10-21T14:19:15.499Z"
+    },
+    {
+        "_id": "6533ddffd9ce114eebb45f93",
+        "user_id": "65339879d84cc01aa9e8fe8d",
+        "name": "Mustafa",
+        "description": "Karademir",
+        "rating": 5,
+        "createdAt": "2023-10-21T14:19:43.560Z",
+        "updatedAt": "2023-10-21T14:19:43.560Z"
+    },
+    {
+        "_id": "6533de31d9ce114eebb45fa7",
+        "user_id": "65339879d84cc01aa9e8fe8d",
+        "name": "Mustafa",
+        "description": "Karademir2",
+        "rating": 2,
+        "createdAt": "2023-10-21T14:20:33.077Z",
+        "updatedAt": "2023-10-21T14:28:55.138Z"
+    }
+]
