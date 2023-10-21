@@ -37,10 +37,11 @@ const RestaurantTable: React.FC<RestaurantTableProps> = ({ restaurants, paginati
 
     const result = await restaurantService.rateRestaurant(id, rating, authService.getJwtCookie());
     if (result.error) {
-      console.log(result.errorDetails.message)
+      return toast.error(result.errorDetails.message);
     }
-    // console.log(selectedRestaurant)
-    // console.log(`"${selectedRestaurant?.name}" restoranına ${rating} yıldız verildi.`);
+    toast.success(`This ${selectedRestaurant.name} restaurant was given ${rating} rates`)
+    onPageChange(1); //refresh page
+
     closeModal();
   };
 
@@ -126,14 +127,15 @@ const RestaurantTable: React.FC<RestaurantTableProps> = ({ restaurants, paginati
 
       <Modal show={showModal} onHide={closeModal} centered>
         <Modal.Header closeButton>
-          <Modal.Title>Restoran Oy Verme</Modal.Title>
+          <Modal.Title>Restaurant Rating</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           {selectedRestaurant && (
             <div>
-              <h3 className="text-center">Oy vereceğiniz restoran: <b>{selectedRestaurant.name}</b></h3>
+              <h3 className="text-center">The restaurant you'll rate: <b>{selectedRestaurant.name}</b></h3>
               <div>
-                <h3 className="text-center">Restoranı derecelendir</h3>
+                <h3 className="text-center">Rate this restaurant</h3>
+                <h3 className="text-center">Average rate of the restaurant : <b>{selectedRestaurant.rating}</b></h3>
                 <div className="d-flex justify-content-center">{[1, 2, 3, 4, 5].map((star) => (
                   <span
                     key={star}
