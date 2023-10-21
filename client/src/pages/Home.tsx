@@ -9,7 +9,7 @@ const Home: React.FC = () => {
     const [restaurants, setRestaurants] = useState<RestaurantI[]>([]);
     const [pagination, setPagination] = useState<{ currentPage: number, totalItems: number, totalPages: number }>();
     const [sorting, setSorting] = useState<{ order: 'ASC' | 'DESC' }>({
-        order: 'ASC',      // Default sorting order
+        order: 'DESC',      // Default sorting order
     });
 
     const fetchRestaurantData = async (page: number, sortOrder: 'ASC' | 'DESC') => {

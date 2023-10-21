@@ -3,7 +3,7 @@ import { handleAxiosError } from "../api/axios.error";
 class RestaurantService {
 
 
-    async getRestaurants(page = 1, sorting = "ASC") {
+    async getRestaurants(page = 1, sorting = "DESC") {
 
 
         const path = `restaurants?page=${page}&sorting=${sorting}`;
