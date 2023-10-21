@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import RestaurantTable from '../components/Restaurant/Table';
 import { RestaurantI } from '../types';
 import restaurantService from '../services/RestaurantService';
-import RestaurantForm from '../components/Restaurant/Form';
 
 
 const Home: React.FC = () => {
