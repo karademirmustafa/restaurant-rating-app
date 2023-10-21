@@ -6,7 +6,6 @@ import { CreateRestaurantDto } from './dtos/create-restaurant.dto';
 import { SortOptions } from './types';
 import { RatingService } from 'src/rating/rating.service';
 import { RateRestaurantDto } from './dtos/rate-restaurant.dto';
-import { User } from 'src/user/user.entity';
 
 @Injectable()
 @Dependencies(RatingService)
@@ -68,6 +67,7 @@ export class RestaurantsService {
         const { user_id } = rate;
         const restaurant = await this.findById(id);
         if (!restaurant) throw new NotFoundException('No restaurant found to rate');
+        
         const exist_rate_user = await this.ratingService.findOneRating(id, user_id);
         try {
             if (exist_rate_user) {
@@ -75,11 +75,11 @@ export class RestaurantsService {
                 await exist_rate_user.save();
             } else {
                 await this.ratingService.create({ id, rate: rate.rate }, rate.user_id);
-
             }
 
             const calculateAverage = await this.ratingService.calculateRating(id);
-
+            restaurant.rating=calculateAverage;
+            await restaurant.save();
             return {
                 statusCode: 200,
                 message: "Successfull",

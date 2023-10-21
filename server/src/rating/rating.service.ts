@@ -22,10 +22,8 @@ export class RatingService {
 
     async calculateRating(id: string) {
         const ratings = await this.findRatingRestaurant(id);
-
-        const aritmetik = ratings.reduce((acc, current) => acc += current.rate, 0)
-
-        return Number((Number(aritmetik) / ratings.length).toFixed(2));
+        const average = ratings.reduce((acc, current) => acc += current.rate, 0)
+        return Number((Number(average) / ratings.length).toFixed(2));
     }
     async create(createRatingDto: CreateRatingDto, userId: string) {
         const { rate, id } = createRatingDto;

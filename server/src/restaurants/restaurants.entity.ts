@@ -12,7 +12,7 @@ export class Restaurant extends Document {
   @Prop()
   description: string;
 
-  @Prop()
+  @Prop({default:5})
   rating: number;
 }
 

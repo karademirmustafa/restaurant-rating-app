@@ -3,8 +3,6 @@ import { RestaurantsController } from './restaurants.controller';
 import { RestaurantsService } from './restaurants.service';
 import { MongooseModule } from '@nestjs/mongoose';
 import { Restaurant, RestaurantSchema } from './restaurants.entity';
-import { Rating, RatingSchema } from 'src/rating/rating.entity';
-import { RatingService } from 'src/rating/rating.service';
 import { RatingModule } from 'src/rating/rating.module';
 
 @Module({

@@ -12,11 +12,11 @@ export class CreateRestaurantDto {
     @IsString()
     description?: string;
 
-    @ApiProperty()
-    @IsNumber()
-    @IsNotEmpty()
-    @Min(0, { message: 'Rating must be at least 0' })
-    @Max(5, { message: 'Rating must not exceed 5' })
+    // @ApiProperty()
+    // @IsNumber()
+    // @IsNotEmpty()
+    // @Min(0, { message: 'Rating must be at least 0' })
+    // @Max(5, { message: 'Rating must not exceed 5' })
     rating?: number;
 
     user_id:string;
