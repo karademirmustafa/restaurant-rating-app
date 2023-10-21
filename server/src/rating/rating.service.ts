@@ -16,8 +16,8 @@ export class RatingService {
     async findOneRating(restaurant_id: string, user_id) {
         const rating = await this.ratingModel.findOne({ restaurant_id, user_id });
 
-        if (!rating) throw new NotFoundException("Not found rating");
-        return rating;
+        // if (!rating) throw new NotFoundException("Not found rating");
+        return rating ? rating : null;
     }
 
     async calculateRating(id: string) {

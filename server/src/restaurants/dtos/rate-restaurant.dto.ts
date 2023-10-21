@@ -1,7 +1,8 @@
+import { ApiProperty } from "@nestjs/swagger";
 import { IsNotEmpty, IsNumber, Min, Max} from "class-validator";
 
 export class RateRestaurantDto {
-
+  @ApiProperty()
   @IsNumber()
   @IsNotEmpty()
   @Min(0, { message: 'Rating must be at least 0' })
