@@ -39,6 +39,3 @@ Once you get the server up you can access the api docs on this url :
 ```
 http://localhost:4000/api-docs
 ```
-
-##Script How to run
-
