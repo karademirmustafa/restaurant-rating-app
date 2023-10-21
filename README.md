@@ -26,9 +26,19 @@ npm run start
 ```
 8. The client app is up on **3000** port.
 
+## How to run Script ?
+
+Make sure you are in the server folder in the terminal and run this code in terminal.
+ ```
+node bin/scripts/generate-restaurant
+```
+
 ## API Docs
 Once you get the server up you can access the api docs on this url : 
 
 ```
 http://localhost:4000/api-docs
 ```
+
+##Script How to run
+
